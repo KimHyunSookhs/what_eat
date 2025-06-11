@@ -19,7 +19,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('What Eat'),
+        title: Text('Google Map'),
       ),body:  GoogleMap(initialCameraPosition: CameraPosition(target: _center, zoom: 11.0),onMapCreated: _onMapCreated,),
     );
   }
