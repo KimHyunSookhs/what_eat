@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:what_eat/map_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: 'assets/env/.env');
   runApp(const MyApp());
 }
 
@@ -10,8 +14,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MapScreen(),
-    );
+    return MaterialApp(home: MapScreen());
   }
 }
